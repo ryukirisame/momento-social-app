@@ -1,0 +1,43 @@
+@import "../../style.scss";
+
+.myFollowers {
+  @include themify($themes) {
+    // margin: 24px 36px;
+    padding: 24px;
+    background-color: themed("bgSoft");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    .container {
+      background-color: themed("bg");
+      min-width: 550px;
+      max-width: 720px;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      padding: 20px 24px;
+      span:first-child {
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: themed("textColor");
+      }
+
+      .followers {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        // background-color: green;
+        width: fit-content;
+
+        span:first-child {
+          font-size: 14px;
+          color: themed("textColorSoft");
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

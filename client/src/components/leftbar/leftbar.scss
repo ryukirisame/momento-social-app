@@ -1,0 +1,93 @@
+@import "../../style.scss";
+
+.leftbar {
+  @include themify($themes) {
+    flex: 2;
+    position: sticky;
+    top: 56px;
+    background-color: themed("bg");
+    height: calc(100vh - 56px);
+    border-right: 1px solid themed("border");
+    min-width: max-content;
+    max-width: 250px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    .container {
+      padding: 16px 18px;
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .user {
+          padding: 4px 8px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          border-radius: 6px;
+          img {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          span {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: themed("textColor");
+          }
+
+          &:hover {
+            background-color: themed("bgSoft");
+          }
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 4px 8px;
+          cursor: pointer;
+          border-radius: 6px;
+          img {
+            height: 32px;
+            width: 32px;
+          }
+          span {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: themed("textColor");
+          }
+
+          &:hover {
+            background-color: themed("bgSoft");
+          }
+        }
+
+        span {
+          font-family: "Poppins", sans-serif;
+          font-size: 14px;
+          align-self: left;
+          color: themed("textColor");
+        }
+      }
+
+      .separator {
+        background-color: themed("textColorSoft");
+        height: 1px;
+        width: 100%;
+        margin: 8px 0px;
+      }
+    }
+  }
+}

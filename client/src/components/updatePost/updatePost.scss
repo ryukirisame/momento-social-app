@@ -1,0 +1,36 @@
+@import "../../style.scss";
+
+.updatePost {
+  @include themify($themes) {
+    position: fixed;
+    background-color: themed("bgSoft");
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    z-index: 999;
+    padding: 16px;
+
+    .closeButton {
+      cursor: pointer;
+      color: themed("textColor");
+
+      transition: 0.2s padding ease-in-out;
+      &:hover {
+        color: #4361ee;
+        background-color: themed("bg");
+        border-radius: 50%;
+        padding: 4px;
+      }
+    }
+    .updateTools {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: fit-content;
+    }
+  }
+}

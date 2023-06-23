@@ -1,0 +1,118 @@
+@import "../../style.scss";
+
+.comments {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid themed("bgSoft");
+    margin-top: 12px;
+    padding-top: 20px;
+    gap: 12px;
+    // padding: 24px 0px;
+
+    .write {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      // profile pic
+      img {
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      //   write comment
+      textarea {
+        min-height: 40px;
+        height: 1em;
+        padding: 8px 12px;
+        font-family: "Poppins", sans-serif;
+        background-color: themed("bgSoft");
+        border: 2px solid themed("bgSoft");
+        border-radius: 12px;
+        outline: none;
+        color: themed("textColor");
+        flex: 1;
+
+        &:focus {
+          border: 2px solid themed("primaryColor");
+          background-color: themed("bg");
+        }
+      }
+      .sendIcon {
+        display: flex;
+        // flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        // border: 1px solid black;
+
+        color: themed("primaryColor");
+
+        &:hover {
+          background-color: themed("bgSoft");
+        }
+      }
+    }
+    .comment {
+      //   margin: 8px 0px;
+      display: flex;
+      //   align-items: center;
+      gap: 12px;
+
+      .profilePic {
+        align-self: flex-start;
+
+        img {
+          height: 40px;
+          width: 40px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .commentInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: themed("textColor");
+
+        gap: 4px;
+        // max-width: 60%;
+        .desc {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          background-color: themed("bgSoft");
+          padding: 10px 14px;
+          border-radius: 12px;
+
+          .name {
+            text-decoration: none;
+            min-width: max-content;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: themed("textColor");
+          }
+          p {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+        .datetime {
+          padding: 0px 14px;
+          font-family: "Poppins", sans-serif;
+          font-size: 12px;
+          color: themed("textColorSoft");
+        }
+      }
+    }
+  }
+}

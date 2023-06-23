@@ -1,0 +1,107 @@
+@import "../../style.scss";
+
+.navbar {
+  @include themify($themes) {
+    background-color: themed("bg");
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    min-width: max-content;
+    align-items: center;
+    padding: 8px 34px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 3;
+    color: themed("textColor");
+
+    .nav-bar-icon:hover {
+      cursor: pointer;
+      color: themed("primaryColor");
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      // background-color: red;
+
+      span {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 750;
+        font-size: 18px;
+        color: themed("logo");
+        &:hover {
+          color: themed("primaryColor");
+        }
+      }
+
+      .search {
+        // background-color: #4361ee;
+
+        form {
+          display: flex;
+
+          input {
+            outline: none;
+            padding: 6px 12px;
+            border: 2px solid themed("bgSoft");
+            font-size: 14px;
+            font-family: "poppins", sans-serif;
+            border-radius: 6px 0px 0px 6px;
+            background-color: themed("bgSoft");
+            width: 275px;
+
+            color: themed("textColor");
+
+            &:focus {
+              border: 2px solid themed("primaryColor");
+              background-color: themed("bg");
+            }
+          }
+          button {
+            background-color: themed("bgSoft");
+            border: none;
+            padding: 6px 12px;
+            border-radius: 0px 6px 6px 0px;
+            cursor: pointer;
+            color: themed("textColor");
+
+            &:hover {
+              background-color: themed("primaryColor");
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      // background-color: aliceblue;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+
+      div.logout {
+        display: flex;
+        cursor: pointer;
+        padding: 6px 12px;
+        align-items: center;
+        gap: 8px;
+        border-radius: 6px;
+        color: themed("textColor");
+
+        span {
+          font-family: "Poppins", sans-serif;
+          font-size: 14px;
+
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: themed("bgSoft");
+        }
+      }
+    }
+  }
+}

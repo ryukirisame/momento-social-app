@@ -1,0 +1,16 @@
+@import "../../style.scss";
+
+.home {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+    color: themed("textColor");
+    min-width: max-content;
+    // max-width: 640px;
+    // margin: 24px 36px;
+    padding: 24px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // max-width: px;
+  }
+}

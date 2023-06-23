@@ -1,0 +1,91 @@
+.login {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  height: 100vh;
+  .card {
+    width: min-content;
+    height: min-content;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 0px 28px;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 36px;
+      border-bottom: 1px solid #ced4da;
+      gap: 16px;
+
+      h1 {
+        font-family: "Montserrat", sans-serif;
+
+        color: #343a40;
+        font-size: 20px;
+        // margin-bottom: 8px;
+        font-weight: 400;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        input {
+          outline: none;
+          padding: 8px 12px;
+          border: 2px solid #e9ecef;
+          //   margin: 6px 0px;
+          font-size: 14px;
+          font-family: "poppins", sans-serif;
+          border-radius: 6px;
+          background-color: #e9ecef;
+        }
+        input:focus {
+          border: 2px solid #4361ee;
+          background-color: white;
+        }
+        button {
+          margin: auto;
+          width: 100%;
+          //   margin-top: 6px;
+          background-color: #4361ee;
+          border: none;
+          outline: none;
+          padding: 10px 12px;
+          font-family: "Montserrat", sans-serif;
+          color: white;
+          font-weight: 600;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: max-content;
+      padding: 20px 0px;
+      //   background-color: #ced4da;
+
+      span {
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+        margin-right: 8px;
+      }
+      button {
+        background: none;
+        border: none;
+        font-family: Poppins, sans-serif;
+        color: #4361ee;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+}

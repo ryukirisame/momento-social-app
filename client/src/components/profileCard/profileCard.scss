@@ -1,0 +1,29 @@
+@import "../../style.scss";
+
+.profileCard {
+  @include themify($themes) {
+    .user {
+      display: flex;
+      //
+      align-items: center;
+      gap: 12px;
+      padding: 6px 12px;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: themed("bgSoft");
+      }
+      img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      span {
+        font-size: 14px;
+        color: themed("textColor");
+        font-family: "Poppins", sans-serif;
+      }
+    }
+  }
+}

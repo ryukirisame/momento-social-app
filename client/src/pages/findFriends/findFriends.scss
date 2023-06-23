@@ -1,0 +1,38 @@
+@import "../../style.scss";
+
+.findFriends {
+  @include themify($themes) {
+    padding: 24px;
+    background-color: themed("bgSoft");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    .searchResult {
+      display: flex;
+      flex-direction: column;
+      background-color: themed("bg");
+      width: fit-content;
+      padding: 24px;
+      min-width: 550px;
+      max-width: 640px;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+      span {
+        font-family: "Poppins", sans-serif;
+
+        color: themed("textColor");
+      }
+      span:first-child {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .result {
+        margin-top: 8px;
+        width: fit-content;
+      }
+    }
+  }
+}

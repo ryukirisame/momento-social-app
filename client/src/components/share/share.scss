@@ -1,0 +1,104 @@
+@import "../../style.scss";
+
+.share {
+  @include themify($themes) {
+    width: 100%;
+    max-width: 640px;
+    min-width: 590px;
+    // margin-top: 24px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      background-color: themed("bg");
+      padding: 20px 24px;
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+      .top {
+        display: flex;
+        // gap: 12px;
+        .left {
+          flex: 1;
+          display: flex;
+          gap: 12px;
+          img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          textarea {
+            flex: 1;
+            height: 7em;
+            // border: 1px solid themed("bgSoft");
+            border: none;
+            color: themed("textColor");
+            background-color: themed("bgSoft");
+            border-radius: 6px;
+            padding: 8px 12px;
+            outline: none;
+            font-family: "Poppins", sans-serif;
+          }
+        }
+        .right {
+          padding: 4px;
+          display: flex;
+          flex-direction: column;
+
+          justify-content: center;
+          .fileImg {
+            width: 100px;
+            height: min-content;
+            max-height: 72px;
+            object-fit: cover;
+          }
+        }
+      }
+      hr {
+        margin: 20px 0px;
+        border: 1px solid themed("bgSoft");
+      }
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          display: flex;
+          gap: 24px;
+
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: min-content;
+
+            cursor: pointer;
+            img {
+              height: 24px;
+            }
+            span {
+              font-family: "Poppins", sans-serif;
+              font-size: 14px;
+              color: themed("textColor");
+            }
+          }
+        }
+        .right {
+          button {
+            border: none;
+            height: 40px;
+            width: 120px;
+            align-self: center;
+            background-color: themed("primaryColor");
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
